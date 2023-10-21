@@ -8,7 +8,6 @@ import java.util.NoSuchElementException;
 
 public class SLLJoinLists {
     public static void main(String[] args) throws IOException {
-        BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
         SLL lista1 = new SLL();
         SLL lista2 = new SLL();
         //Add nodes to the list

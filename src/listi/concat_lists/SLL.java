@@ -93,7 +93,6 @@ public class SLL {
         }
         System.out.println("Nodes of singly linked list: ");
         while(current != null) {
-            //Prints each node by incrementing pointer
             System.out.print(current.data + " ");
             current = current.next;
         }
