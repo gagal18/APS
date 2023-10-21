@@ -51,6 +51,7 @@ public class SLL {
             this.tail = list.tail;
         }
     }
+
     public int size(){
         SLLNode curr = this.head;
         int size = 0;
@@ -60,6 +61,7 @@ public class SLL {
         }
         return size;
     }
+
     public SLLNode find(int data){
         SLLNode curr = this.head;
         while (curr != null){
