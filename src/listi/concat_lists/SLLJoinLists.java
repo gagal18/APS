@@ -1,13 +1,6 @@
 package listi.concat_lists;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-
 public class SLLJoinLists {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         SLL lista1 = new SLL();
         SLL lista2 = new SLL();
         //Add nodes to the list
@@ -25,18 +18,22 @@ public class SLLJoinLists {
 
 
         //Displays the nodes present in the list
+        System.out.println("---------------LISTA 1 filling, printing and size of it---------");
         lista1.display();
+        System.out.println(lista1.size());
+        System.out.println("---------------LISTA 2 filling, printing and size of it---------");
         lista2.display();
-        System.out.println(lista1.size());
         System.out.println(lista2.size());
+        System.out.println("---------------MERGE LISTA 2 into Lista1---------");
         lista1.mergeSLL(lista2);
-        System.out.println("-----------------x---------");
+        System.out.println("-----------------PRINT LISTA1 merged---------");
         lista1.display();
         System.out.println(lista1.size());
-
+        System.out.println("-----------------PRINT LISTA1 element with data 1 (using find method)---------");
         SLLNode find_1 = lista1.find(1);
         System.out.println(find_1.data);
         lista2.mirror();
+        System.out.println("-----------------PRINT LISTA2 mirrored---------");
         lista2.display();
     }
 }
