@@ -83,22 +83,25 @@ public class PostFixEvaluation {
         stack.clear();
         int num = 0;
 
-        for (char c : izraz) {
+        for (int i = 0; i < n; i++) {
+            char c = izraz[i];
             if (Character.isDigit(c)) {
-                num = num * 10 + (c - '0');
+                if( num == -1){
+                    num = c - '0';
+                }else {
+                    num = num * 10 + (c - '0');
+                }
             } else if (c == '*' || c == '-' || c == '/' || c == '+') {
                 int first = stack.pop();
                 int second = stack.pop();
-                num = 0;
                 switch (c) {
                     case '+':
-                        stack.push(first+second );
+                        stack.push(first + second);
                         break;
                     case '*':
-                        stack.push(first*second );
+                        stack.push(first * second);
                         break;
                     case '-':
-
                         stack.push(second - first);
                         break;
                     case '/':
@@ -106,8 +109,10 @@ public class PostFixEvaluation {
                         break;
                 }
             } else {
-                stack.push(num);
-                num = 0;
+                if(num != -1){
+                    stack.push(num);
+                }
+                num = -1;
             }
         }
 
