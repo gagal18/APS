@@ -1,12 +1,14 @@
+package labs.lab10;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
 
-class Graph<T> {
+class GraphSet<T> {
     int num_nodes;
     Map<T, Set<T>> matrix;
 
-    Graph() {
+    GraphSet() {
         matrix = new HashMap<>();
     }
 
@@ -71,7 +73,7 @@ class Graph<T> {
 
 public class GraphCreate {
     public static void main(String args[]) throws Exception {
-        Graph<Integer> graph = new Graph<Integer>();
+        GraphSet<Integer> graph = new GraphSet<Integer>();
         String line;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
