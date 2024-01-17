@@ -1,9 +1,10 @@
-package labs.lab11.roads;
+//package labs.lab11.organization;
 
-import java.util.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.*;
+
 
 class Edge{
     private double weight;
@@ -164,7 +165,7 @@ class Graph {
     }
 }
 
-class Roads {
+public class Organization {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int num_cities = Integer.parseInt(br.readLine());
