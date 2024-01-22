@@ -1,9 +1,8 @@
-package kol_2;
+package kol_2.exe2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Map;
 
 class MapEntry<K extends Comparable<K>,E> implements Comparable<K> {
 
